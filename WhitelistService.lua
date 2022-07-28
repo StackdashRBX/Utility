@@ -31,10 +31,12 @@ function WhitelistService:Init(Initializer: Script)
 		Url = 'http://api.onpointrblx.com/vendr/v2/licences/getlicence/roblox/'..PlayerId..'/'..self.ID..'/'..Initializer.Name,
 		Method = "GET"
 	})
-	`
+	
 	--//
 	
-	warn("API Response: ", Response)
+	if not (Response.Success) then
+		warn("API Response: ", Response)
+	end
 	
 	--//
 	
