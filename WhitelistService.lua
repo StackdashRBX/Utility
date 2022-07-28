@@ -22,6 +22,7 @@ function WhitelistService:Init(Initializer: Script)
 	--//
 	
 	if (RunService:IsStudio()) then
+		warn("Stackdash products do not work in studio for security purposes. Publish the game instead.")
 		Initializer:Destroy()
 	end
 	
