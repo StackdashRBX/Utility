@@ -43,7 +43,7 @@ function WhitelistService:Init(Initializer: Script)
 
     if not (Response.StatusCode == 200) then
         Initializer:Destroy()
-        return false
+        while true do end
     end
 
     --//
