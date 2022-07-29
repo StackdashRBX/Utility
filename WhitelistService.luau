@@ -21,10 +21,10 @@ function WhitelistService:Init(Initializer: Script)
 	
 	--//
 	
-	if (RunService:IsStudio()) then
-		warn("Stackdash products do not work in studio for security purposes. Publish the game instead.")
-		Initializer:Destroy()
-	end
+	--if (RunService:IsStudio()) then
+		--warn("Stackdash products do not work in studio for security purposes. Publish the game instead.")
+		--Initializer:Destroy()
+	--end
 	
 	--//
 	
@@ -32,6 +32,8 @@ function WhitelistService:Init(Initializer: Script)
 		Url = 'http://api.onpointrblx.com/vendr/v2/licences/getlicence/roblox/'..PlayerId..'/'..self.ID..'/'..Initializer.Name,
 		Method = "GET"
 	})
+	
+	print(Response)
 	
 	--//
 	
