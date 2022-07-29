@@ -40,8 +40,15 @@ function WhitelistService:Init(Initializer: Script)
 	end
 	
 	--//
-	
-	return (Response.StatusCode == 200) or Initializer:Destroy()
+
+    if not (Response.StatusCode == 200) then
+        Initializer:Destroy()
+        return false
+    end
+
+    --//
+
+    return true
 end
 
 --//
