@@ -33,8 +33,6 @@ function WhitelistService:Init(Initializer: Script)
 		Method = "GET"
 	})
 	
-	print(Response)
-	
 	--//
 	
 	if not (Response.Success) then
@@ -43,7 +41,7 @@ function WhitelistService:Init(Initializer: Script)
 	
 	--//
 	
-	return (Response.Status == 200) or Initializer:Destroy()
+	return (Response.StatusCode == 200) or Initializer:Destroy()
 end
 
 --//
